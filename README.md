@@ -3,9 +3,9 @@
 Кастомная программа, осуществляющая сбор метрик с помощью Jira API. 
 Запуск программы осуществляется командой maven = 
 
-\```
+```
 clean -DcurrentVersion=${CURRENT_VERSION} "-DpreviousVersionsList=${PAST_VERSIONS}" "-DmetricsList=${METRIC_LIST}" -DcollectWorklog=${COLLECT_WORKLOG} compile exec:java
-\```
+```
 
 Где 
   - CURRENT_VERSION = номер текущего релиза
