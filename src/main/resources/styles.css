@@ -1,0 +1,406 @@
+:root {
+  /* Цвет фона */
+  --background-color: #f4f4f4;
+
+  /* Цвет текста */
+  --text-color: #555555;
+
+  /* Округленные углы */
+  --border-radius: 5px;
+
+  /* Шрифт */
+  --font-family: system-ui;
+
+  /* Жирный шрифт */
+  --font-weight-bold: bold;
+
+  /* Скорость перехода */
+  --transition-speed: 0.3s;
+
+  /* Основной цвет фона */
+  --background-color: white;
+
+  /* Цвет текста */
+  --text-color: #555555;
+
+  /* Цвет фона для подсказок (tooltip) */
+  --tooltip-bg: rgba(85, 85, 85, 0.7);
+
+  /* Цвет текста для подсказок */
+  --tooltip-text-color: #fff;
+
+  /* Тень для элементов */
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  /* Радиус скругления углов */
+  --border-radius: 5px;
+
+  /* Скорость перехода для анимаций */
+  --transition-speed: 0.3s;
+
+  /* Масштабирование при наведении */
+  --hover-scale: 1.05;
+
+  /* Основной цвет (может использоваться в различных элементах) */
+  --main-color: #555555;
+
+  /* Цвет фона для эпических задач */
+  --epic-bg: rgba(204, 153, 255, 0.5);
+
+  /* Цвет фона для историй */
+  --story-bg: rgba(144, 238, 144, 0.5);
+
+  /* Цвет фона для задач */
+  --task-bg: rgba(173, 216, 230, 0.5);
+
+  /* Цвет фона для багов */
+  --bug-bg: rgba(255, 182, 193, 0.5);
+
+  /* Цвет фона для других задач */
+  --other-bg: rgba(255, 204, 128, 0.5);
+
+  /* Повторное определение основного цвета фона (возможно, ошибка) */
+  --background-color: #fff;
+
+  /* Повторное определение цвета текста (возможно, ошибка) */
+  --text-color: #555555;
+
+  /* Цвет фона заголовка */
+  --header-bg-color: #f2f2f2;
+
+  /* Цвет фона строки при наведении */
+  --hover-row-bg-color: #eaeaea;
+
+  /* Повторное определение тени (возможно, ошибка) */
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  /* Повторное определение цвета фона (возможно, ошибка) */
+  --background-color: #f9f9f9;
+
+  /* Повторное определение тени (возможно, ошибка) */
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  /* Повторное определение радиуса скругления углов (возможно, ошибка) */
+  --border-radius: 8px;
+}
+
+/* Основной стиль для body */
+body {
+  background-color: var(--background-color);
+}
+
+/* Контейнер для flex-элементов */
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 95%;
+  margin-bottom: 50px;
+}
+
+/* Стиль для блоков */
+.box {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  width: 20%;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: 30px;
+  font-weight: var(--font-weight-bold);
+  margin-top: 10px;
+}
+
+/* Стиль для правого блока */
+.right-box {
+  display: flex;
+  justify-content: flex-end;
+  width: 10%;
+  margin-top: 10px;
+}
+
+/* Медиа-запросы для настройки на разных разрешениях */
+@media (min-width: 1920px) {
+  .box {
+    width: 30%;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1920px) and (min-width: 1280px) {
+  .box {
+    width: 25%;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .box {
+    width: 10%;
+    font-size: 15px;
+    margin-top: 5px;
+  }
+
+  .right-box {
+    width: 15%;
+    font-size: 15px;
+  }
+}
+
+/* Контейнер для блоков со статистикой */
+.stat-box-container {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 50px auto 0;
+}
+
+/* Группа для блоков */
+.stat-box-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Индивидуальный блок со статистикой */
+.stat-box {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  font-family: "Work Sans", system-ui;
+  font-size: 16px;
+  box-shadow: var(--box-shadow);
+  transition: transform var(--transition-speed) ease;
+}
+
+/* Первый блок */
+.first-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Эффект при наведении на блок со статистикой */
+.stat-box:hover {
+  transform: scale(var(--hover-scale));
+}
+
+/* Стиль подсказки */
+.tooltip {
+  visibility: hidden;
+  width: 240px;
+  background-color: var(--tooltip-bg);
+  color: var(--tooltip-text-color);
+  text-align: center;
+  border-radius: var(--border-radius);
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 115%;
+  left: 50%;
+  margin-left: -120px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/* Показываем подсказку при наведении на заголовок столбца или блок со статистикой */
+th:hover .tooltip,
+.stat-box:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Стиль для числа в блоке со статистикой */
+.number {
+  display: block;
+  font-weight: bold;
+  font-size: 40px;
+  color: gray;
+  text-align: center;
+}
+
+/* Стиль для ссылок */
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+/* Эффект при наведении на ссылку */
+a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+  transform: scale(var(--hover-scale));
+}
+
+/* Стили кнопки */
+button {
+  background-color: #32cd32;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed), transform 0.2s;
+  font-size: 16px;
+}
+
+/* Эффект при наведении на кнопку */
+button:hover {
+  background-color: #90ee90;
+  transform: scale(var(--hover-scale));
+}
+
+/* Заголовок для секции текста */
+.caption {
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: system-ui;
+  color: var(--main-color);
+  padding: 10px;
+  margin-top: 10px;
+  max-height: 30px;
+}
+
+/* Заголовок внутри caption с отступом справа */
+.caption-title {
+  margin-right: 50px;
+}
+
+/* Контейнер для текста */
+.text-container {
+  display: flex;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: system-ui;
+}
+
+/* Элемент текста с индивидуальным стилем */
+.text-item {
+  color: var(--main-color);
+  border-radius: 15px;
+  padding: 5px 10px;
+  margin-left: 20px;
+}
+
+/* Элемент текста с фоном для эпиков */
+.text-item-epic {
+  background-color: var(--epic-bg);
+}
+
+/* Элемент текста с фоном для историй */
+.text-item-story {
+  background-color: var(--story-bg);
+}
+
+/* Элемент текста с фоном для задач */
+.text-item-task {
+  background-color: var(--task-bg);
+}
+
+/* Элемент текста с фоном для ошибок */
+.text-item-bug {
+  background-color: var(--bug-bg);
+}
+
+/* Элемент текста с фоном для остальных задач */
+.text-item-other {
+  background-color: var(--other-bg);
+}
+
+/* Стили контейнера таблицы */
+.table-container {
+  border-radius: 8px;
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow);
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+/* Стили таблицы */
+table {
+  width: 100%;
+  border-radius: 8px;
+  border-collapse: collapse;
+  background-color: var(--background-color);
+  margin: 20px auto;
+  font-family: system-ui;
+}
+
+/* Ячейки таблицы (заголовки столбцов и данные) */
+th,
+td {
+  padding: 12px;
+  font-family: system-ui;
+  color: var(--text-color);
+  text-align: left;
+}
+
+/* Заголовки столбцов таблицы */
+th {
+  background-color: var(--header-bg-color);
+  font-weight: bold;
+  position: relative;
+}
+
+/* Эффект при наведении на строку таблицы */
+tr:hover {
+  background-color: var(--hover-row-bg-color);
+}
+
+/* Элемент выделения */
+.highlight {
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Выделение для эпиков */
+.highlight-epic {
+  background-color: rgba(204, 153, 255, 0.5);
+}
+
+/* Выделение для историй */
+.highlight-story {
+  background-color: rgba(144, 238, 144, 0.5);
+}
+
+/* Выделение для задач */
+.highlight-task {
+  background-color: rgba(173, 216, 230, 0.5);
+}
+
+/* Выделение для ошибок */
+.highlight-bug {
+  background-color: rgba(255, 182, 193, 0.5);
+}
+
+/* Выделение для остальных задач */
+.highlight-other {
+  background-color: rgba(255, 204, 128, 0.5);
+}
+
+/* Контейнер для графиков */
+.chart-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* Элемент canvas для графиков */
+canvas {
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  border-radius: var(--border-radius);
+}

@@ -1,0 +1,20 @@
+{
+  "GetHolidays API URL": "https://calendar.kuzyak.in/api/",
+  "JIRA URL": "https://jira.slsoft.ru/",
+  "JIRA API URL": "https://jira.slsoft.ru/rest/api/2/",
+  "Логин JIRA": "citros_service",
+  "Пароль JIRA": "VyYOcM%G",
+  "Метрики": {
+    "Количество найденных ошибок": "project = UZEDO & issuetype = Bug & affectedVersion = <ReleaseVersion> & created <= <ReleaseDate>",
+    "Количество критических ошибок": "project = UZEDO & issuetype = Bug & priority = Critical & affectedVersion = <ReleaseVersion> & created <= <ReleaseDate>",
+    "Количество исправленных ошибок": "project = UZEDO & issuetype = Bug & status = Closed & fixVersion = <ReleaseVersion>",
+    "Длина бэклога": "project = UZEDO & issuetype = Bug & rshb_project = '<ProjectName>' & status was not Closed on <ReleaseDate> & created <= <ReleaseDate>",
+    "Количество ошибок с прода": "project = UZEDO & issuetype = Bug & affectedVersion = <ReleaseVersion> & (labels = метрика_прод or \"номер внешнего запроса\" is not empty)"
+  },
+  "Список задач релиза": "project = UZEDO & fixVersion = <ReleaseVersion>",
+  "Разработчики": ["Асадуллин Эльнур Маратович", "Баратов Руслан Камильджанович", "Валеев Эдуард Рустемович", "Давыдов Алексей Евгеньевич", "Золотов Максим Евгеньевич", "Мигранов Салават Вагизович", "Мусаханов Тахир ", "Набиева Юлия Фангатовна", "Наматуллин Альберт Рафисович", "Охрименко Юрий Владимирович", "Стариков Роман Евгеньевич", "Субботкин Михаил ", "Сычев Никита Андреевич", "Усольцев Максим Сергеевич", "Харипов Ильнур Ильдарович", "Эйрих Елена Валериевна", "Якимов Егор Петрович"],
+  "Тестировщики": ["Беляев Арсений Родионович", "Блохина Ольга Игоревна", "Бодякова Дарья Денисовна", "Даутова Руфина Рустамовна", "Захарова Анна Сергеевна", "Исхакова Эльвира Фаритовна", "Кандарова Алина Зульфаровна", "Кобзев Олег Вячеславович", "Мазгарова Лилия Маратовна", "Малинкина Юлия Алексеевна", "Мурадов Руслан Гурбанович", "Саматова Карина Алексеевна", "Сафин Эмиль Рустэмович", "Соломаткина Анна Алексеевна", "Шайбакова Аделия Рустемовна", "Шибанова Валерия Михайловна"],
+  "Инженеры": ["Головинский Андрей Анатольевич", "Князев Вадим Геннадьевич", "Фомин Андрей Олегович"],
+  "Аналитики": ["Бурлакова Арина Владимировна", "Ворожбицкая Юлия Валерьевна", "Егорова Надежда Евгеньевна", "Кольпикова Ксения Викторовна"],
+  "Иконка": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg id=\"_лой_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 38.41 67.08\"><defs><style>.cls-1{fill:url(#linear-gradient-2);}.cls-2{fill:#002342;}.cls-3{fill:blue;}.cls-4{fill:url(#linear-gradient);}</style><linearGradient id=\"linear-gradient\" x1=\"0\" y1=\"277.66\" x2=\"13.4\" y2=\"277.66\" gradientTransform=\"translate(0 286.31) scale(1 -1)\" gradientUnits=\"userSpaceOnUse\"><stop offset=\"0\" stop-color=\"#ff0057\"/><stop offset=\".95\" stop-color=\"#ff0057\"/></linearGradient><linearGradient id=\"linear-gradient-2\" x1=\"23.41\" y1=\"277.66\" x2=\"38.41\" y2=\"277.66\" xlink:href=\"#linear-gradient\"/></defs><path class=\"cls-2\" d=\"M30.8,67.08v-6.9H3.8V23.88h7.1v30.1h14.4V23.88h7v30.1h4.7v13.1h-6.2Z\"/><rect class=\"cls-3\" x=\"16.7\" y=\"7\" width=\"3.33\" height=\"3.3\"/><path class=\"cls-4\" d=\"M6.7,15.35c-3.7,0-6.7-3-6.7-6.7S3,1.85,6.7,1.95c3.7,0,6.7,3,6.7,6.7s-3,6.7-6.7,6.7Zm0-10.2c-1.9,0-3.4,1.5-3.4,3.4s1.5,3.4,3.4,3.4,3.4-1.5,3.4-3.4c0-1.8-1.5-3.4-3.4-3.4h0Z\"/><path class=\"cls-1\" d=\"M23.41,17.3V0l15,8.7-15,8.6Zm3.3-11.6v5.9l5.1-3-5.1-2.9Z\"/></svg>"
+}
